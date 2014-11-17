@@ -3,12 +3,12 @@ var calculator = require('../lib/calculator'),
 
 describe('Calculator', function(){
 
-  it('sums two values', function(){
-    expect(calculator.sum(-2, 4)).to.equal(2);
+  it('sums a list of numbers', function(){
+    expect(calculator.sum([-2, 4])).to.equal(2);
   });
 
-  it('multiplies two values', function(){
-    expect(calculator.multiply(4, 5)).to.equal(20);
+  it('multiplies a list of numbers', function(){
+    expect(calculator.multiply([4, 5])).to.equal(20);
   });
 
 });

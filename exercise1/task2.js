@@ -13,7 +13,12 @@
 //  = Task 2 =
 //  ==========
 //  Working with variables
-var calculator = require('./lib/calculator');
+var calculator = require('./lib/calculator'),
+	numbers = [2,3,4,5];
 
-console.log('The sum of 2 and 3 is:', calculator.sum(2,3));
-console.log('Multiplying 4 with 5 is:', calculator.multiply(2, 3));
+console.log('The numbers are: ', numbers);
+// Using sum()
+console.log('The sum of the numbers = ', calculator.sum(numbers));
+
+// Using multiply()
+console.log('Multiplying the numbers = ', calculator.multiply(numbers));
