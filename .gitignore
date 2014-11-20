@@ -3,3 +3,7 @@ node_modules
 npm-debug.log
 # That would be to easy
 answer.js
+
+# Sublime files
+*.sublime-project
+*.sublime-workspace
