@@ -1,18 +1,20 @@
 var _ = require('underscore');
 
 // Create some basic HTML listing the forks
-var stars = function(repositories){
-
+var stars = function (repositories) {
+  debugger;
   function top5(){
+    console.log('top5()');
     var sortedShortList = _.sortBy(repositories, function(repo){
-      return repo.stargazers_count /* jshint ignore:line */
+      return repo.stargazers_count; /* jshint ignore:line */
     });
-
-    return sortedShortList.reverse().splice(1, 5);
+    // reverse the order (from ascending to descending) and return the first 5 results
+    return sortedShortList.reverse().splice(0, 5);
   }
 
   function averageStars(){
-    var avg, sum, repositories, count = 0;
+    console.log('averageStars()');
+    var avg, sum, count = 0;
 
     sum = _.reduce(repositories, function(memo, repo){
       // Increase the count, so we can divide the total stars

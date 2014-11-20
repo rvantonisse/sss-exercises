@@ -21,7 +21,7 @@ var fs = require('fs');
 var repositories = JSON.parse(fs.readFileSync('./data/task4.json', 'utf8'));
 
 // Create stars instance
-var stars = Stars(repositories.items);
+var stars = new Stars(repositories.items);
 
 // Get top5 & average
 var top5 = stars.top5();

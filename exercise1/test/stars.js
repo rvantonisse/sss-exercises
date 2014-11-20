@@ -25,10 +25,10 @@ describe('Repository stars', function(){
 
   it('calculates an average', function(){
     var stars = Stars([
-      {'name': 'lib4', 'stargazers_count': 10},
+      {'name': 'lib4', 'stargazers_count': 6},
       {'name': 'lib5', 'stargazers_count': 10}
     ]);
-    expect(stars.averageStars()).to.equal(10);
+    expect(stars.averageStars()).to.equal(8);
   });
 
 });
