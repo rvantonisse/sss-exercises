@@ -2,7 +2,6 @@ var _ = require('underscore');
 
 // Create some basic HTML listing the forks
 var stars = function (repositories) {
-  debugger;
   function top5(){
     console.log('top5()');
     var sortedShortList = _.sortBy(repositories, function(repo){
