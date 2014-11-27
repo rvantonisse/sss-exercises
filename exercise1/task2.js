@@ -22,3 +22,4 @@ console.log('The sum of the numbers = ', calculator.sum(numbers));
 
 // Using multiply()
 console.log('Multiplying the numbers = ', calculator.multiply(numbers));
+
