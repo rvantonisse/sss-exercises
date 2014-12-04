@@ -1,6 +1,8 @@
-var express = require('express');
-var path = require('path');
-var app = express();
+var express = require('express'),
+	path = require('path'),
+	app = express(),
+	task2 = require('./routes/task2'),
+	task3 = require('./routes/task3');
 
 // Setup serving static assets
 app.use(express.static('public'));
@@ -14,7 +16,12 @@ app.get('/', function(req, res) {
   res.render('index', {title: 'Server-side Scripting - Exercise 2'});
 });
 
+// Load task 2 routes
+app.use('/task2',task2);
+app.use('/task3', task3);
+
+
 // Start the server
-var server = app.listen(3000, function(){
+var server = app.listen(3000, function () {
   console.log('App listening at http://localhost:3000');
 });
