@@ -2,7 +2,8 @@ var express = require('express'),
 	path = require('path'),
 	app = express(),
 	task2 = require('./routes/task2'),
-	task3 = require('./routes/task3');
+	task3 = require('./routes/task3'),
+	task4 = require('./routes/task4');
 
 // Setup serving static assets
 app.use(express.static('public'));
@@ -22,6 +23,8 @@ app.use('/task2',task2);
 // Load task 3 routes
 app.use('/task3', task3);
 
+// Load task 4 routes
+app.use('/task4', task4);
 
 // Start the server
 var server = app.listen(3000, function () {

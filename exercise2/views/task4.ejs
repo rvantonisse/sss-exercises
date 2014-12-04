@@ -3,4 +3,14 @@
 
 <h1><%= title %></h1>
 
+<div class="page-body">
+	<% if (cities) { %>
+	<ul>
+		<% for (var city in cities) { %>
+		<li><a href="../task4/<%= cities[city] %>">Het weer in <%= cities[city] %></a></li>
+		<% } %>
+	</ul>
+	<% } %>
+</div>
+
 <%= include layouts/foot %>

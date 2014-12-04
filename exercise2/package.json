@@ -15,5 +15,8 @@
     "express": "~4.9.0",
     "ejs": "~0.8.5",
     "request": "~2.48.0"
+  },
+  "devDependencies": {
+    "request": "^2.48.0"
   }
 }

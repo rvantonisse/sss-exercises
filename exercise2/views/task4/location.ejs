@@ -1,0 +1,12 @@
+<%= include ../layouts/head %>
+
+<h1><%= title %></h1>
+<div class="page-body">
+	<% if (weather) { %>
+	<div>Ill show you some weather!</div>
+	<div>It is blowing <%= weather.wind.speed %> winds from <%= weather.wind.direction %> degrees</div>
+	<% } %>
+	<a href="../task4/">Return to city overview</a>
+</div>
+
+<%= include ../layouts/foot %>
