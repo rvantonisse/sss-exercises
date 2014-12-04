@@ -9,7 +9,7 @@ router.get('/', function(req, res) {
 // Title
 router.get('/title', function(req, res) {
   res.render('task3/title', {
-    title: "De title in een template"
+    title: "Che che che Chaaanges!"
   });
 });
 
@@ -18,7 +18,8 @@ router.get('/title', function(req, res) {
 router.get('/boolean', function(req, res) {
   res.render('task3/boolean', {
     isBlogPost: true,
-    title: "De title in een template"
+    title: "BOO Lean",
+    subTitle: "Blogposts"
   });
 });
 

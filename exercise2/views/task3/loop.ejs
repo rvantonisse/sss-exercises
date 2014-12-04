@@ -1,13 +1,17 @@
 <h1><%= title %></h1>
 
-<!--
-  Using <pre> & JSON.stringify pure for debuggin purposes
-  ===
-
-  * <pre> Tells the browser that we have preformatted text meaning it preserves the whitespacing
-  * JSON.stringify for displaying the conents of blogposts, see also
-    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
--->
-<pre>
-  <%= JSON.stringify(blogPosts, null, 2) %>
-</pre>
+<% if (blogPosts) {
+	for (var post in blogPosts) { %>
+<article>
+	<header class="blogpost-header">
+		<h2><%= blogPosts[post].title %></h2>
+		<time><%= blogPosts[post].date %></time>
+	</header>
+	<div class="blogpost-body">
+		<p><%= blogPosts[post].excerpt %></p>
+	</div>
+</article>
+<% 	}
+} else { %>
+<p>No posts here buddy...</p>
+<% } %>

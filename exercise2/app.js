@@ -18,6 +18,8 @@ app.get('/', function(req, res) {
 
 // Load task 2 routes
 app.use('/task2',task2);
+
+// Load task 3 routes
 app.use('/task3', task3);
 
 
