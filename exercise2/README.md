@@ -10,7 +10,7 @@ This exercise will help you understand:
 * the way external data can be retrieved and rendered.
 
 ## Before you start
-* [Download the exercises](http://cl.ly/1W0z2s041K39)
+* [Download the exercises](http://cl.ly/3l0r160k1k0P)
 * Read this exercise
 * Install the dependencies, ```npm install```.
 * _It is advisable to type all code by hand_, and not to copy-paste the examples. By typing them by hand, helps you reason about every single line and makes it comprehensible. 
@@ -91,7 +91,7 @@ The task of the routers is to translate an incoming request, to specific code of
 5. Remember to restart the server (```node app.js```) when you've made any changes to the code. 
 5. Can you make the url [http://localhost:3000/task2](http://localhost:3000/task2) work?
 6. Read 'Route as Router'.
-6. Can you make the url [http://localhost:3000/task2/sub-route](http://localhost:3000/task2/sub-route), using ```app.use(task2Router)```, work?
+6. Can you make the url [http://localhost:3000/task2/sub-route](http://localhost:3000/task2/sub-route), using ```app.use('/task2', task2Router)```, work?
 
 ### Route as ```function```
 Say you want to route the url ```/task2```, you can declare this route by using [app.get(path, fn)](http://expressjs.com/4x/api.html#router.METHOD). 
@@ -116,7 +116,7 @@ var task2 = function(req, res){
   res.send('Task 2');
 };
 
-module.exports = task;
+module.exports = task2;
 ```
 
 
@@ -162,7 +162,7 @@ router.get('/', function(req, res){
 });
 ```
 
-### Named parameters
+#### Named parameters
 ```
 // somewhere in routes/task2.js
 // ...
