@@ -1,0 +1,16 @@
+<h1>
+	<%= title %>
+</h1>
+
+<h2>Login form</h2>
+<% if (err) { %>
+<p>Wrong user credentials</p>
+<% } %>
+
+<form action="<%= req.baseUrl + '/login' %>" method="POST">
+	<label for="login-username">Naam:</label>
+	<input id="login-username" name="username" type="text">
+	<label for="login-password">Wachtwoord:</label>
+	<input id="login-password" name="password" type="password">
+	<button type="submit">Login</button>
+</form>

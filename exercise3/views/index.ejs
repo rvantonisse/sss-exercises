@@ -1,2 +1,5 @@
 <h1><%= title %></h1>
-<a href="/users">Taak 1</a>
+<% if (username) { %>
+<p>Welcome, <%= username %> (<a href="/users/logout">logout</a>)</p>
+<% } %>
+<a href="/users">users</a>

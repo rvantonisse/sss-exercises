@@ -12,7 +12,9 @@
     "ejs": "~0.8.5",
     "express-session": "~1.9.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "body-parser": "^1.10.0"
+  },
   "scripts": {},
   "keywords": [
     "exercise1",
