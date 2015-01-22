@@ -52,7 +52,7 @@ var dbOptions = {
 };
 
 // Add connection middleware
-app.use(myConnection(mysql, dbOptions, 'single'));
+// app.use(myConnection(mysql, dbOptions, 'single'));
 
 //  ===========
 //  = Routers =
@@ -63,14 +63,16 @@ var testRouter = require('./routers/test');
 app.use('/test', testRouter);
 
 // This should be the ONLY route in this file!
-app.get('/', function(req, res){
-  res.redirect('/test');
+app.get('/', function (req, res){
+  var data = {};
+  res.render('index', data);
+  // res.redirect('/test');
 });
 
 //  =================
 //  = Start the app =
 //  =================
 
-app.listen(3000, function(){
+app.listen(3000, function () {
   console.log('App listening at http://localhost:3000');
 });
