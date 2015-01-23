@@ -7,3 +7,6 @@ answer.js
 # Sublime files
 *.sublime-project
 *.sublime-workspace
+
+# WebStorm workspace
+.idea
