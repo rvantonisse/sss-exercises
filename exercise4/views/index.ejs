@@ -1,1 +1,16 @@
-<h1><%= title %></h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+</head>
+<body>
+	<h1><%= title %></h1>
+	<ul>
+		<li><% if (locals.user) { %>Hallo <%= locals.user %> (<a href="/user/logout/">afmelden</a>)<% } else { %><a href="/user/login">login</a><% } %></li>
+	</ul>
+	<p>
+		Blah blah hier
+	</p>
+</body>
+</html>
+

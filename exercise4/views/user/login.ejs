@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercise 4 <%= title %></title>
+</head>
+<body>
+	<h1>Login</h1>
+	<% if (locals.error) { %>
+	<p>Oeps! Gebruiker en/of wachtwoord zijn niet juist.</p>
+	<% } %>
+	<form method="POST" action="<%= req.baseUrl %>/login">
+		<label for="name">Naam</label>
+		<input id="name" name="name" type="text">
+
+		<label for="password">Wachtwoord</label>
+		<input id="password" name="password" type="password">
+
+		<button type="submit">login</button>
+	</form>
+</body>
+</html>
