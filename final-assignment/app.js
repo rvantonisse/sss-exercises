@@ -33,10 +33,10 @@ app.use(session({
   resave: false
 }));
 
-// Setup bodyparser
+// Setup bodyparser (for form rendering)
 app.use(bodyParser.urlencoded({extended: true}));
 
-// Setup Multer
+// Setup Multer (for images // file uploading)
 app.use(multer({
   dest: './uploads/'
 }));
